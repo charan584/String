@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+	char name[100];
+	int length,first,last,flag=1;
+	clrscr();
+	printf("Enter name:");
+	gets(name);
+	for(length=0;name[length]!='\0';length++)
+	first=0;
+	last=length-1;
+	while(first<=last)
+	{
+		if(name[first]!=name[last])
+		{
+			flag=0;
+			break;
+		}
+		first++;
+		last--;
+	}
+	if(flag)
+		printf("It is palindrome");
+	else
+		printf("itis not a palindrome");
+	getch();
+	return 0;
+}
+
+
+
+
+
+
+
+
+
